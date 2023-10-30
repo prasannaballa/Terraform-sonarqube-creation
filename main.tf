@@ -23,7 +23,7 @@ terraform {
     resource_group_name = "sivaaks"
     storage_account_name = "webacr"
     container_name = "sonarqube"
-    key = "terraform.storage"
+    key = "sonarqube"
     access_key = "SP7p/X+ZnFhAoufkEaBk+4cqKJdhIQpbrITUiQD5g1mWi2vLhbLxYdcMPafRIbULWBVrXdavUMjs+AStdYHRdg=="
   }
 }
