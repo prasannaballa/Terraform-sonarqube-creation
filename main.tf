@@ -28,7 +28,7 @@ terraform {
   }
 }
 provider "kubernetes" {
-  config_context = "default"
+  config_context = "sivaaks"
 }
 
 # Use data block to fetch the AKS cluster credentials
