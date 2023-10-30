@@ -29,10 +29,13 @@ terraform {
 }
 
 provider "kubernetes" {
-  config_path    = "~/.kube/config"
-  config_context = "sivaaks"
+  host                   = azurerm_kubernetes_cluster.main.kube_config.0.host
+  username               = azurerm_kubernetes_cluster.main.kube_config.0.username
+  password               = azurerm_kubernetes_cluster.main.kube_config.0.password
+  client_certificate     = base64decode(azurerm_kubernetes_cluster.main.kube_config.0.client_certificate)
+  client_key             = base64decode(azurerm_kubernetes_cluster.main.kube_config.0.client_key)
+  cluster_ca_certificate = base64decode(azurerm_kubernetes_cluster.main.kube_config.0.cluster_ca_certificate)
 }
-
 # Use data block to fetch the AKS cluster credentials
 data "azurerm_kubernetes_cluster" "existing_aks" {
   name                = "sivaaks"
