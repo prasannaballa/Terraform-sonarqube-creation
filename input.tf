@@ -35,7 +35,3 @@ variable "resource_group_name" {
   description = "RG name in Azure"
 }
 
-variable "prefix" {
-  type = string
-  description = "The prefix used for all resources in this example"
-}
