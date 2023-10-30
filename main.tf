@@ -22,13 +22,13 @@ terraform {
   backend "azurerm" {
     resource_group_name = "sivaaks"
     storage_account_name = "webacr"
-    container_name = "acr"
+    container_name = "sonarqube"
     key = "terraform.storage"
     access_key = "SP7p/X+ZnFhAoufkEaBk+4cqKJdhIQpbrITUiQD5g1mWi2vLhbLxYdcMPafRIbULWBVrXdavUMjs+AStdYHRdg=="
   }
 }
 provider "kubernetes" {
-  config_context = "your-kube-context"
+  config_context = "sonarqube"
 }
 
 # Use data block to fetch the AKS cluster credentials
