@@ -25,13 +25,5 @@ variable "tenant_id" {
     description = "tenant id"
   
 }
-variable "location" {
-  type        = string
-  default = "East US"
-  description = "Rg location"
-}
-variable "resource_group_name" {
-  type        = string
-  description = "RG name in Azure"
-}
+
 
