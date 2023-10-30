@@ -48,7 +48,7 @@ resource "kubernetes_namespace" "sonarqube" {
 resource "kubernetes_deployment" "sonarqube" {
   metadata {
     name     = "sonarqube-deployment"
-    namespace = kubernetes_namespace.sonarqube-namespace.metadata[0].name
+    namespace = kubernetes_namespace.sonarqube.metadata[0].name
   }
 
   spec {
