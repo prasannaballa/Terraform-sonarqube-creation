@@ -25,8 +25,8 @@ provider "kubernetes" {
 
 # Use data block to fetch the AKS cluster credentials
 data "azurerm_kubernetes_cluster" "existing_aks" {
-  name                = "your-aks-cluster-name"
-  resource_group_name = "your-aks-resource-group"
+  name                = "sivaaks"
+  resource_group_name = "sivaaks"
 }
 
 resource "kubernetes_namespace" "sonarqube" {
