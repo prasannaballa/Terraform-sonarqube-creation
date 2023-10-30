@@ -27,7 +27,9 @@ terraform {
     access_key = "SP7p/X+ZnFhAoufkEaBk+4cqKJdhIQpbrITUiQD5g1mWi2vLhbLxYdcMPafRIbULWBVrXdavUMjs+AStdYHRdg=="
   }
 }
+
 provider "kubernetes" {
+  config_path    = "~/.kube/config"
   config_context = "sivaaks"
 }
 
