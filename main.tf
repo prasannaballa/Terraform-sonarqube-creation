@@ -30,8 +30,7 @@ terraform {
 
 
 provider "kubernetes" {
-config_path    = "~/.kube/config"
-  config_context = "sivaaks"
+  host =  "https://sivaaks-dns-dyy8ax9d.hcp.centralindia.azmk8s.io:443"
   }
 
 # Use data block to fetch the AKS cluster credentials
